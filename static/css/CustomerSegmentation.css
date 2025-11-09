@@ -1,0 +1,215 @@
+/* CustomerSegmentation.css */
+:root {
+    --primary: #4e73df;
+    --secondary: #6f42c1;
+    --success: #1cc88a;
+    --info: #36b9cc;
+    --warning: #f6c23e;
+    --danger: #e74a3b;
+    --light: #f8f9fc;
+    --dark: #5a5c69;
+}
+
+body {
+    background-color: #f8f9fc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+}
+
+.main-content {
+    padding-bottom: 40px;
+}
+
+.segmentation-card {
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin-bottom: 30px;
+    border: none;
+}
+
+.segmentation-card .card-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border-radius: 10px 10px 0 0 !important;
+    border: none;
+}
+
+.segmentation-card .card-header h2 {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.segmentation-card .card-header h2 i {
+    margin-right: 10px;
+}
+
+.segmentation-card .card-header p {
+    opacity: 0.9;
+    margin-bottom: 0;
+}
+
+.upload-form {
+    margin-top: 20px;
+}
+
+.file-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: 2px dashed #d1d3e2;
+    border-radius: 8px;
+    background-color: #f8f9fc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.file-upload-label:hover {
+    border-color: var(--primary);
+    background-color: #eaecf4;
+}
+
+.file-upload-label i {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.file-upload-label span {
+    font-weight: 600;
+    color: var(--dark);
+}
+
+#file-upload {
+    display: none;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    border-radius: 30px;
+    padding: 12px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.spinner-container {
+    text-align: center;
+    margin-top: 30px;
+    display: none;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: var(--primary);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.results-section {
+    display: none;
+    margin-top: 40px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h3 {
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: #6c757d;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.image-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.image-card img:hover {
+    opacity: 0.8;
+}
+
+.image-card .card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.image-card h5 {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.modal-content {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    border: none;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .file-upload-label {
+        padding: 20px;
+    }
+    
+    .file-upload-label i {
+        font-size: 2rem;
+    }
+}

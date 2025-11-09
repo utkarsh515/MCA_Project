@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Predictive Customer Segmentation - Home</title>
+  <link rel="icon" href="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type="image/x-icon"/>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+  <!-- Navbar (Original Structure) -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Predictive-Customer-Segmentation</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/CustomerSegmentation">Customer Segmentation</a></li>
+        <li class="nav-item"><a class="nav-link" href="/CustomerPrediction">Customer Prediction</a></li>
+        <li class="nav-item"><a class="nav-link" href="/result">Result</a></li>
+        {% if email %}
+          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+        {% else %}
+          <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#registerModal">Register</a></li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1>AI-Powered Customer Insights</h1>
+          <p class="lead">Discover patterns, predict churn, and segment your customers with our advanced machine learning platform.</p>
+          <div class="hero-buttons">
+            {% if email %}
+              <a href="/CustomerSegmentation" class="btn btn-primary btn-lg">Get Started</a>
+              <a href="/about" class="btn btn-outline-primary btn-lg">Learn More</a>
+            {% else %}
+              <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">Get Started</a>
+              <a href="/about" class="btn btn-outline-primary btn-lg">Learn More</a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMHNjaWVuY2V8ZW58MHx8MHx8fDA%3D" alt="Customer Analytics" class="img-fluid hero-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>Powerful Features</h2>
+          <p class="section-subtitle">Everything you need to understand your customers better</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-pie"></i>
+            </div>
+            <h3>Customer Segmentation</h3>
+            <p>Group your customers into meaningful segments based on their behavior and characteristics using advanced clustering algorithms.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-search-dollar"></i>
+            </div>
+            <h3>Churn Prediction</h3>
+            <p>Identify customers who are likely to churn using our deep learning models and take proactive measures to retain them.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3>RFM Analysis</h3>
+            <p>Analyze customer value based on Recency, Frequency, and Monetary metrics to optimize your marketing strategies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h2>How It Works</h2>
+          <p class="section-subtitle">Simple steps to get valuable customer insights</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>Upload Data</h3>
+            <p>Upload your customer data in CSV format. Our system will automatically process and clean the data for analysis.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>Run Analysis</h3>
+            <p>Choose between segmentation or prediction analysis. Our AI models will process your data and generate insights.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>Get Results</h3>
+            <p>View comprehensive reports, visualizations, and actionable insights to make data-driven business decisions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto text-center">
+          <h2>Ready to Transform Your Customer Analytics?</h2>
+          <p>Join hundreds of businesses that are already using our platform to gain deep customer insights and drive growth.</p>
+          {% if email %}
+            <a href="/CustomerSegmentation" class="btn btn-primary btn-lg">Start Analyzing</a>
+          {% else %}
+            <a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registerModal">Get Started Now</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2025 Predictive Customer Segmentation. All rights reserved by UTKARSH .</p>
+        </div>
+        <div class="col-md-6 text-right">
+          <p>Powered by AI and Machine Learning</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form method="POST" action="/">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" name="action" value="login"/>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" name="email" class="form-control" required/>
+            </div>
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="password" name="password" class="form-control" required/>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+          </div>
+          <div class="modal-footer">
+            <p>Don't have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerModal">Register</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Register Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form method="POST" action="/">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="registerModalLabel">Create an Account</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <input type="hidden" name="action" value="register"/>
+            <div class="form-group">
+              <label>Email:</label>
+              <input type="email" name="email" class="form-control" required/>
+            </div>
+            <div class="form-group">
+              <label>Password:</label>
+              <input type="password" name="password" class="form-control" required/>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Register</button>
+          </div>
+          <div class="modal-footer">
+            <p>Already have an account? <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginModal">Login</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Flash Messages Container (initially hidden) -->
+  <div id="flash-messages" style="display: none;">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-message" data-category="{{ category }}" data-message="{{ message }}"></div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- External JavaScript -->
+  <script src="/static/js/index.js"></script>
+</body>
+</html>
